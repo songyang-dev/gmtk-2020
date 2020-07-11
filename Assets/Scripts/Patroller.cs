@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 /// <summary>
 /// This script lets the AI (navmesh agent) patrol using patrolTargets which is checked every frame in Update
 /// and run through a coroutine to move to the next target.
@@ -187,10 +188,11 @@ public class Patroller : MonoBehaviour
         }
 
         patrolling = true;
-        yield return new WaitForSeconds(2f); // explain this delay of 2 seconds #TODO
+        yield return new WaitForSeconds(2f); // waits for two seconds before moving to the next point
         arrived = false;
 
-        // what is happening here #TODO
+        // AI gets next point in array of navigation points; if reaches last in array,
+        //it goes back to the beginning
         agent.destination = patrolTargets[destPoints].position;
         destPoints = (destPoints + 1) % patrolTargets.Length;
     }
