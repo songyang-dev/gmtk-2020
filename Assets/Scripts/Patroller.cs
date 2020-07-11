@@ -5,16 +5,6 @@ using UnityEngine.AI;
 
 public class Patroller : MonoBehaviour
 {
-
-    /// <summary>
-    /// This script lets the AI (navmesh agent) patrol using patrolTargets which is checked every frame in Update
-    /// and run through a coroutine to move to the next target.
-    /// 
-    /// It also allows the AI to see the player (or target) using a raycast, and if it hits the target, then it can
-    /// see player and chases. When in certain stopping distance, it attacks the player.
-    /// 
-    /// The AI stores the last known position of the target so that it continually follows the player.
-    /// </summary>
     NavMeshAgent agent;
     Animator anim;
     public Transform target;
@@ -91,11 +81,9 @@ public class Patroller : MonoBehaviour
             anim.SetBool("Attack", false);
             if (!patrolling)
             {
-               
                 agent.SetDestination(lastKnownPosition);
                 if(agent.remainingDistance < agent.stoppingDistance)
                 {
-                    Debug.Log("works");
                     patrolling = true;
                     StartCoroutine("GoToNextPoint");
                 }
@@ -106,12 +94,12 @@ public class Patroller : MonoBehaviour
     }
 
     IEnumerator GoToNextPoint()
-    { 
+    {
         if(patrolTargets.Length == 0)
         {
             yield break;
         }
-       
+
         patrolling = true;
         yield return new WaitForSeconds(2f);
         arrived = false;
