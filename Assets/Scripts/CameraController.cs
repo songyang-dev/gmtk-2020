@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// Controls the camera based on mouse position.
+/// Does not center back to the player in any case.
+/// </summary>
 public class CameraController : MonoBehaviour
 {
     /// <summary>
