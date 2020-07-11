@@ -6,7 +6,7 @@ Preset:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CameraControllers
+  m_Name: CameraController
   m_TargetType:
     m_NativeTypeID: 114
     m_ManagedTypePPtr: {fileID: 11500000, guid: 04b5cef723fe8234bae1b93a920ef9c3,
