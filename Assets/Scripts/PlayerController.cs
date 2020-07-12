@@ -78,6 +78,6 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void Fire()
     {
-        animator.SetTrigger("Shoot");
+        animator.SetBool("Shoot", true);
     }
 }
