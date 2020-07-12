@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{b577042f-4c7f-4536-bb1a-c386f778a42d}">
+		<property name="assetPath">
+			<value>enemy-shoot1.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.55200000000000005</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{63b6c30a-c9c6-41c9-b076-e0d6c1cf8109}</destination>
+		</relationship>
+	</object>
+</objects>
