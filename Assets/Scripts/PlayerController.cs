@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
         // raw
         _moving = ctx.action.ReadValue<Vector2>();
         animator.SetBool("Running", true);
+        animator.SetBool("isShooting", false);
     }
 
     /// <summary>
@@ -78,6 +79,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void Fire()
     {
-        animator.SetBool("Shoot", true);
+        animator.SetBool("isShooting", true);
+        animator.SetTrigger("Shoot");
     }
+
 }
