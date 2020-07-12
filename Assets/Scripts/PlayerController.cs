@@ -10,6 +10,11 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     /// <summary>
+    /// Reference to the animator of the player
+    /// </summary>
+    public Animator animator;
+
+    /// <summary>
     /// Speed of the player in units/s
     /// </summary>
     public float Speed;
@@ -36,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
         // raw
         _moving = ctx.action.ReadValue<Vector2>();
+        animator.SetBool("Running", true);
     }
 
     /// <summary>
@@ -44,7 +50,10 @@ public class PlayerController : MonoBehaviour
     /// <param name="direction">Direction to move</param>
     private void Move(Vector2 direction)
     {
-        if (_moving.Equals(Vector2.zero)) return;
+        if (_moving.Equals(Vector2.zero)) {
+            animator.SetBool("Running", false);
+            return;
+        }
         
         var change = new Vector3(_moving.x * Speed * Time.deltaTime, 0,
             _moving.y * Speed * Time.deltaTime);
@@ -69,6 +78,6 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void Fire()
     {
-        throw new NotImplementedException();
+        animator.SetTrigger("Shoot");
     }
 }
