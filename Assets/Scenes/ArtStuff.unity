@@ -1178,6 +1178,7 @@ Transform:
   m_PrefabInstance: {fileID: 1144866035327378771}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4486720746410935544
+
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1245,14 +1246,18 @@ PrefabInstance:
       value: Prop_Col
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+
   m_SourcePrefab: {fileID: 100100000, guid: b32cc04b3d5467b46961bde2b51a89f7, type: 3}
 --- !u!4 &4572322181816277649 stripped
+
 Transform:
   m_CorrespondingSourceObject: {fileID: 7058494270904997367, guid: ac9a288ff5dac4d4fad75a58cdea2048,
     type: 3}
   m_PrefabInstance: {fileID: 6809699822575046502}
   m_PrefabAsset: {fileID: 0}
+
 --- !u!1001 &4748262138615568404
+
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1297,7 +1302,7 @@ PrefabInstance:
     - target: {fileID: 3729842729134658344, guid: d735e124661b0cf41acdd009f675a6c6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3729842729134658344, guid: d735e124661b0cf41acdd009f675a6c6,
         type: 3}
@@ -1320,8 +1325,10 @@ PrefabInstance:
       value: Prop_Panel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+
   m_SourcePrefab: {fileID: 100100000, guid: d735e124661b0cf41acdd009f675a6c6, type: 3}
 --- !u!1001 &4802514581960073953
+
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
