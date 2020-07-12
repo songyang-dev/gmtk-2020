@@ -2247,6 +2247,7 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
+
       path: 3495254813
       attribute: 2086281974
       script: {fileID: 0}
@@ -2275,6 +2276,10 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
+<<<<<<< HEAD
+=======
+
+>>>>>>> acc553c2975ed6a3c60ab47942975b3958ebe4c7
       path: 569456917
       attribute: 2
       script: {fileID: 0}
