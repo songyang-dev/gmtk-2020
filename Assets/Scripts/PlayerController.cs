@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         // be on the move
-        Move(_moving);
+        Move();
     }
 
     /// <summary>
@@ -48,18 +48,37 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Moves the player by an increment in the given direction
     /// </summary>
-    /// <param name="direction">Direction to move</param>
-    private void Move(Vector2 direction)
+    private void Move()
     {
         if (_moving.Equals(Vector2.zero)) {
             animator.SetBool("Running", false);
             return;
-        }
-        
+        }        
+
         var change = new Vector3(_moving.x * Speed * Time.deltaTime, 0,
             _moving.y * Speed * Time.deltaTime);
 
         this.transform.Translate(change, Space.World);
+        
+        Rotate();
+    }
+
+    private void Rotate()
+    {
+        // Determine which direction to rotate towards
+        Vector3 targetDirection = _moving;
+
+        // The step size is equal to speed times frame time.
+        float singleStep = Speed * Time.deltaTime;
+
+        // Rotate the forward vector towards the target direction by one step
+        Vector3 newDirection = Vector3.RotateTowards(transform.rotation.eulerAngles, targetDirection, singleStep, 0.0f);
+
+        // Draw a ray pointing at our target in
+        Debug.DrawRay(transform.position, newDirection, Color.red);
+
+        // Calculate a rotation a step closer to the target and applies rotation to this object
+        transform.rotation = Quaternion.LookRotation(newDirection);
     }
 
     /// <summary>
